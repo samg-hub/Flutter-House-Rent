@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:v2rayadmin/view/pages/profilePage.dart';
-
 import '../main.dart';
+import '../view/pages/profilePage.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {

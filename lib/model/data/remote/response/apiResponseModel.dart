@@ -1,7 +1,7 @@
 //this is a class for managing api responses
 //it has a generic data
 //it has three status loading , complete, error for managing ui base on three status of api response
-import 'package:v2rayadmin/model/data/remote/response/status.dart';
+import 'package:houserent/model/data/remote/response/status.dart';
 
 class ApiResponse<T> {
 

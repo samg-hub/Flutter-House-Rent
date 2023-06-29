@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:v2rayadmin/routing/routeGenerator.dart';
+import 'package:houserent/routing/routeGenerator.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
