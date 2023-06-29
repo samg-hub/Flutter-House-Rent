@@ -20,7 +20,7 @@ class _ProfilePageState extends State<ProfilePage> {
       child: Consumer<HomeViewModel>(
         builder: (context, homeVm, child){
           return Scaffold(
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.black,
             body: Directionality(
               textDirection: TextDirection.rtl,
               child: SizedBox(
