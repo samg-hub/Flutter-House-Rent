@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../view/pages/homePage.dart';
+import 'package:houserent/view/pages/placePage.dart';
 import '../view/pages/profilePage.dart';
 
 class RouteGenerator {
@@ -8,7 +8,7 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => const ProfilePage());
-      case '/homePage' : return MaterialPageRoute(builder:(context) => const HomePage());
+      case '/homePage' : return MaterialPageRoute(builder:(context) => PlacePage());
       // case '/login' : return MaterialPageRoute(builder:(_)=>const LoginPage());
       // case '/profile' : return MaterialPageRoute(builder:(_)=>profile_page());
       // case '/load' : return MaterialPageRoute(builder:(_)=>load_page());

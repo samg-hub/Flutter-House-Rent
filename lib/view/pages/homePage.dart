@@ -1,8 +1,7 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:houserent/constant/functions.dart';
 import 'package:houserent/constant/text.dart';
 import 'package:houserent/constant/ui.dart';
+import 'package:houserent/view/components/placePage/Facilities.dart';
 import 'package:houserent/view/components/placePage/aboutText.dart';
 import 'package:houserent/view/components/placePage/topCard.dart';
 import '../components/placePage/placeAppbar.dart';
@@ -19,7 +18,6 @@ class HomePage extends StatefulWidget{
 class _homePage extends State<HomePage>{
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return  Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -35,7 +33,8 @@ class _homePage extends State<HomePage>{
                     TopCard(),
                     SizedBox(height: dSpace_8,),
                     AboutText(txtAbout: txt_About),
-                    
+                    SizedBox(height: dSpace_16,),
+                    Facilities(),
                   ],
                 ),
               ),

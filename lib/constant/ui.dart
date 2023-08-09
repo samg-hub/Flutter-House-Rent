@@ -9,6 +9,7 @@ Color darkGreen = const Color(0xff00796B);
 //Standard Size of UI
 double dSpace_4 = 4;
 double dSpace_8 = 8;
+double dSpace_12 = 12;
 double dSpace_16 = 16;
 double dSpace_32 = 32;
 //Colors of UI
@@ -65,8 +66,8 @@ Widget icons_40(Widget icon) {
 
 Widget icons_24(Widget icon) {
   return Container(
-    decoration: const BoxDecoration(
-      // border: Border.all(color: C_red,width: 1)
+    decoration:  BoxDecoration(
+      border: Border.all(color: Colors.red,width: 1)
     ),
     height: 24,
     width: 24,
@@ -76,8 +77,8 @@ Widget icons_24(Widget icon) {
 
 Widget icons_16(Widget icon) {
   return Container(
-    decoration: const BoxDecoration(
-      // border: Border.all(color: C_red,width: 1)
+    decoration: BoxDecoration(
+      border: Border.all(color: Colors.red,width: 1)
     ),
     height: 16,
     width: 16,
