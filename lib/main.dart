@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "appName",
       theme: ThemeData.dark(),
-      initialRoute: '/',
+      initialRoute: '/homePage',
       // the routes are defined in generateRoute method
       onGenerateRoute: RouteGenerator.generateRoute,
     );

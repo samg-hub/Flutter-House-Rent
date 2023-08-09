@@ -17,3 +17,13 @@ Future<void> makePhoneCall(String phoneNumber) async {
     await launchUrl(launchUri);
   }
 }
+String stringLenght(int lenght, String txt){
+  String result = "";
+  if (txt.length <= lenght) {
+    return txt;
+  }
+  for (var i = 0; i < lenght; i++) {
+    result += txt[i];
+  }
+  return result;
+}

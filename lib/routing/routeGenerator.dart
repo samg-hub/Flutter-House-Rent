@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import '../main.dart';
+import '../view/pages/homePage.dart';
 import '../view/pages/profilePage.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments;
 
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => const ProfilePage());
+      case '/homePage' : return MaterialPageRoute(builder:(context) => const HomePage());
       // case '/login' : return MaterialPageRoute(builder:(_)=>const LoginPage());
       // case '/profile' : return MaterialPageRoute(builder:(_)=>profile_page());
       // case '/load' : return MaterialPageRoute(builder:(_)=>load_page());
