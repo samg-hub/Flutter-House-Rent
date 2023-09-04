@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import '../../../constant/ui.dart';
 import '../cardviewPlace.dart';
 
-class NearbyWidget extends StatefulWidget{
-  NearbyWidget({super.key});
+class NearbyWidget extends StatefulWidget {
+  const NearbyWidget({super.key});
   @override
   State<StatefulWidget> createState() {
     return NearbyWidgetState();
   }
 }
+
 class NearbyWidgetState extends State<NearbyWidget> {
   bool reademeStatus = false;
   @override
@@ -17,9 +18,14 @@ class NearbyWidgetState extends State<NearbyWidget> {
       padding: EdgeInsets.only(left: dSpace_12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children:[
-          const Text("Nearby Place",style: TextStyle(color: Colors.black87,fontSize: 20),),
-          SizedBox(height: dSpace_8 + dSpace_4,),
+        children: [
+          Text(
+            "Nearby Place",
+            style: TextStyle(color: colorText, fontSize: 20),
+          ),
+          SizedBox(
+            height: dSpace_8 + dSpace_4,
+          ),
           SizedBox(
             height: 320,
             child: ListView.builder(
@@ -33,10 +39,10 @@ class NearbyWidgetState extends State<NearbyWidget> {
       ),
     );
   }
-  void onTapClick(){
+
+  void onTapClick() {
     setState(() {
       reademeStatus = !reademeStatus;
     });
   }
 }
-

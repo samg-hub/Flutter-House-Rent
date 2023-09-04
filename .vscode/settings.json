@@ -1,4 +1,7 @@
 {
-    "fluttergpt.apiKey": "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",
-    "CodeGPT.apiKey": "Google"
+    "fluttergpt.apiKey": "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",
+    "CodeGPT.apiKey": "Google",
+    "genieai.azure.url": "",
+    "genieai.openai.model": "gpt-3.5-turbo",
+    "genieai.openai.organization": ""
 }

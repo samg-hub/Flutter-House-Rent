@@ -119,13 +119,13 @@ class Anim7 extends StatelessWidget {
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       debugShowMaterialGrid: false,
-      home: const HomePage(),
+      home: const Anim7HomePage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class Anim7HomePage extends StatelessWidget {
+  const Anim7HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

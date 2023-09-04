@@ -2,10 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:flutter/material.dart';
 
-Color green = const Color(0xff00897B);
-Color lightGreen = const Color(0xffE8F5E9);
-Color darkGreen = const Color(0xff00796B);
-
 //Standard Size of UI
 double dSpace_4 = 4;
 double dSpace_8 = 8;
@@ -13,15 +9,19 @@ double dSpace_12 = 12;
 double dSpace_16 = 16;
 double dSpace_32 = 32;
 //Colors of UI
-Color cTextColor = const Color(0xff263238);
-Color vHintColor = const Color(0xffAAA5B2);
-Color cLightBack = const Color(0xffF9F7F4);
-Color cWhite = const Color(0xffffffff);
+Color colorText = const Color(0xFF212121);
+Color colorLightBack = const Color(0xFFfafafa);
+Color colorWhite = Colors.white;
+Color colorTGreen = const Color(0xFF00a37f);
+Color colorGrayText = const Color(0xFF9e9e9e);
+Color colorIconGray = Colors.black54;
+Color colorBlue = const Color(0xFF2196f3);
+Color colorBorderLightGray = const Color(0xFFe0e0e0);
 
-dynamic cGradientDefault =const LinearGradient(colors: [
+dynamic cGradientDefault = const LinearGradient(colors: [
   Color(0xff522C5F),
   Color(0xffC82A4C),
-],transform: GradientRotation(0.8));
+], transform: GradientRotation(0.8));
 
 //TextStyle
 // TextStyle text_20 =
@@ -45,8 +45,8 @@ dynamic cGradientDefault =const LinearGradient(colors: [
 Widget icons_48(Widget icon) {
   return Container(
     decoration: const BoxDecoration(
-      // border: Border.all(color: C_red,width: 1)
-    ),
+        // border: Border.all(color: C_red,width: 1)
+        ),
     height: 48,
     width: 48,
     child: Center(child: icon),
@@ -56,8 +56,8 @@ Widget icons_48(Widget icon) {
 Widget icons_40(Widget icon) {
   return Container(
     decoration: const BoxDecoration(
-      // border: Border.all(color: C_red,width: 1)
-    ),
+        // border: Border.all(color: C_red,width: 1)
+        ),
     height: 40,
     width: 40,
     child: Center(child: icon),
@@ -65,10 +65,8 @@ Widget icons_40(Widget icon) {
 }
 
 Widget icons_24(Widget icon) {
-  return Container(
-    decoration:  BoxDecoration(
-      border: Border.all(color: Colors.red,width: 1)
-    ),
+  return SizedBox(
+    // decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 1)),
     height: 24,
     width: 24,
     child: Center(child: icon),
@@ -77,9 +75,7 @@ Widget icons_24(Widget icon) {
 
 Widget icons_16(Widget icon) {
   return Container(
-    decoration: BoxDecoration(
-      border: Border.all(color: Colors.red,width: 1)
-    ),
+    decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 1)),
     height: 16,
     width: 16,
     child: Center(child: icon),
@@ -108,10 +104,10 @@ Widget profileLoading(String? url,
         ),
         imageUrl: url,
         errorWidget: (context, text, dynamic) =>
-        iconHolder ??
+            iconHolder ??
             Icon(
               Icons.person,
-              color: cTextColor,
+              color: colorText,
               size: 30,
             ),
         fit: BoxFit.cover,
@@ -121,35 +117,40 @@ Widget profileLoading(String? url,
     return iconHolder ??
         Center(
             child: icons_40(Icon(
-              Icons.person,
-              color: cTextColor,
-              size: 30,
-            )));
+          Icons.person,
+          color: colorText,
+          size: 30,
+        )));
   }
 }
 
 //showDialogMessage
 class Dialogs {
-  void showSnackBar(BuildContext context, String message,{IconData icon = Icons.info_outline}) {
+  void showSnackBar(BuildContext context, String message,
+      {IconData icon = Icons.info_outline}) {
     showToastWidget(
       SafeArea(
         child: Container(
           padding:
-          EdgeInsets.symmetric(horizontal: dSpace_16, vertical: dSpace_16),
-          margin: EdgeInsets.symmetric(
-              vertical: 0, horizontal: dSpace_32),
+              EdgeInsets.symmetric(horizontal: dSpace_16, vertical: dSpace_16),
+          margin: EdgeInsets.symmetric(vertical: 0, horizontal: dSpace_32),
           decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(10)),
-              color: cWhite,
-              // border: Border.all(width: 1,color: C_lightBlue),
-              // boxShadow: const[dShadowBox]
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
+            color: colorWhite,
+            // border: Border.all(width: 1,color: C_lightBlue),
+            // boxShadow: const[dShadowBox]
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              icons_24(Icon(icon,color: cLightBack,)),
-              SizedBox(width: dSpace_8,),
+              icons_24(Icon(
+                icon,
+                color: colorLightBack,
+              )),
+              SizedBox(
+                width: dSpace_8,
+              ),
               // Flexible(child: Text(message, style: text_14)),
               // IconButton(
               //   onPressed: () {
